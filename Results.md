@@ -22,6 +22,8 @@ After conversion to Pandas DataFrames, data was sorted, filtered, and prepared f
 
 ## Data Analysis and Visualization
 
+All visualizations were created using **custom Python functions defined in the project code** (e.g. `plot_trends`, `compare_monthly_weekly`). These are not prebuilt functions from any library — they were implemented manually as part of this analysis and then used throughout the notebook. This made it possible to create consistent, tailored visual representations for various time resolutions (hourly, weekly, monthly), focusing on trend discovery and variability.
+
 ### 1. Weekly Average Temperature Heatmap
 
 The heatmap shows weekly average temperatures over the past 13 months, grouped by weeks within each month. This helps to observe seasonal trends, temperature spikes, and stability in weather conditions.
