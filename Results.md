@@ -112,9 +112,17 @@ Weekly: acceptable accuracy, though naturally noisier—especially for rainfall 
 
 Hourly: SARIMAX still produces credible temperature forecasts several days ahead—useful for short-term, local decision-making.
 
-Example of monthly predictions
+Monthly forecast
 
-![copmarison](./images/plot_w.png)
+![month](./images/plot_w.png)
+
+Weekly forecast
+
+![week](./images/plot_weekly.png)
+
+Hourly forecast
+
+![hour](./images/plot_hourly.png)
 
 ## Summary
 
