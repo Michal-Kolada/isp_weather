@@ -76,6 +76,46 @@ compare_monthly_weekly(monthly_df, weekly_full_year_df)
 
 ---
 
+### 6. Prediction
+
+## Weather Forecasting with the SARIMAX Model – Analysis Overview
+In this analysis we used the SARIMAX model, an extended version of classical ARIMA.
+Its main strength is the ability to model time-series data that exhibit trends, clear seasonality and, if needed, exogenous variables (none were used here).
+
+order = (p, d, q) – non-seasonal components:
+
+p – number of autoregressive lags (AR),
+
+d – degree of differencing to achieve stationarity (I),
+
+q – number of moving average lags (MA).
+
+seasonal_order = (P, D, Q, s) – seasonal components:
+
+P, D, Q – seasonal counterparts of p, d, q,
+
+s – length of the seasonal cycle (e.g., 12 for monthly data, 52 for weekly data, 24 for hourly data).
+
+## Results & Observations
+Monthly forecasts
+
+Best performance. Forecasts reproduce realistic seasonal swings and long-term trends.
+
+Why monthly aggregation helps rainfall & wind
+
+- Daily/weekly rainfall can be zero or spike after a single storm.
+
+- Averaging over a month smooths out this noise and reveals clear seasonal structure, which SARIMAX captures very well.
+
+Weekly & hourly forecasts
+Weekly: acceptable accuracy, though naturally noisier—especially for rainfall and wind.
+
+Hourly: SARIMAX still produces credible temperature forecasts several days ahead—useful for short-term, local decision-making.
+
+Example of monthly predictions
+
+![copmarison](./images/plot_w.png)
+
 ## Summary
 
 This complete analysis provides a full picture of atmospheric conditions in Warsaw – from granular hourly data to high-level monthly overviews. Using Spark and Pandas for data processing, followed by visualization in Matplotlib, enabled the creation of clear and informative charts.
